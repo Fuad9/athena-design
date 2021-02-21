@@ -1,0 +1,66 @@
+@import "../../../scss/variables.scss";
+
+.pricing-container {
+    background-image: url("../../../images/Group\ 46@2x.png");
+}
+
+.card-deck .card {
+    border: none;
+    box-shadow: 5px 2px 5px 5px $secondary-color;
+    outline: none;
+    color: $thirdtext-clr;
+    padding: 55px 0;
+
+    h5 {
+        margin-bottom: 15px;
+    }
+
+    .title-bottom {
+        width: 70%;
+        border: 1px solid $border-color;
+    }
+
+    .card-body .card-text {
+        padding-bottom: 25px;
+    }
+
+    .card-body .card-button {
+        display: none;
+    }
+}
+
+.card-deck .card:hover {
+    border-radius: 5px;
+    border: 4px solid $border-color;
+    color: $black;
+    cursor: pointer;
+
+    .title-bottom {
+        width: 70%;
+        border: 1px solid $secondary-color;
+    }
+
+    .card-body .card-button {
+        display: block;
+        width: 60%;
+        margin-bottom: 0;
+        padding: 10px;
+        border: none;
+        outline: none;
+        background: linear-gradient(to right, $brandColor3, $brandColor4);
+        color: $primarytext-clr;
+        border-radius: 20px 0 20px 0;
+        transition: 0.7s;
+    }
+
+    .card-body .card-button:hover {
+        background: linear-gradient(to right, $brandColor4, $brandColor3) !important;
+        color: rgb(51, 50, 50);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-deck .card:hover .card-body .card-button {
+        width: 80%;
+    }
+}

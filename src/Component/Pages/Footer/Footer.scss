@@ -1,0 +1,45 @@
+@import "../../../scss/variables.scss";
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    input {
+        margin: 0px;
+        padding-left: 15px;
+        height: 4em;
+        box-shadow: 5px 2px 5px 2px $secondary-color;
+    }
+
+    button {
+        position: absolute;
+        top: 11px;
+        right: 11px;
+        height: 2.5em;
+        width: 30%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background: linear-gradient(to right, $brandColor3, $brandColor4);
+        color: $primarytext-clr;
+        z-index: 2;
+        transition: 0.7s;
+    }
+
+    button:hover {
+        background: linear-gradient(to left, $brandColor3, $brandColor4);
+        color: rgb(51, 50, 50);
+    }
+}
+
+.footer-items ul li {
+    list-style-type: none;
+}
+
+@media (max-width: 768px) {
+    .search-container button {
+        width: 50%;
+    }
+}
